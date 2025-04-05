@@ -1,0 +1,102 @@
+{
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "back": "Back"
+  },
+  "alerts": {
+    "title": "TradingView Alerts",
+    "create": "Create Alert",
+    "sync": "Sync",
+    "search": "Search alerts...",
+    "status": {
+      "all": "All",
+      "active": "Active",
+      "inactive": "Inactive"
+    },
+    "columns": {
+      "name": "Name",
+      "ticker": "Ticker",
+      "status": "Status",
+      "condition": "Condition",
+      "description": "Description",
+      "lastTrigger": "Last Trigger",
+      "lastUpdated": "Last Updated"
+    },
+    "actions": {
+      "create": "Create Alert",
+      "edit": "Edit Alert",
+      "delete": "Delete Alert",
+      "toggle": "Toggle Alert",
+      "viewLogs": "View Logs"
+    },
+    "messages": {
+      "noAlerts": "No alerts found",
+      "createSuccess": "Alert created successfully",
+      "createError": "Failed to create alert",
+      "editSuccess": "Alert updated successfully",
+      "editError": "Failed to update alert",
+      "deleteSuccess": "Alert deleted successfully",
+      "deleteError": "Failed to delete alert",
+      "syncSuccess": "Alerts synced successfully",
+      "syncError": "Failed to sync alerts"
+    }
+  },
+  "logs": {
+    "title": "Alert Logs",
+    "noLogs": "No logs found for this alert",
+    "columns": {
+      "message": "Message",
+      "time": "Time"
+    }
+  },
+  "validation": {
+    "title": "Validation Rules",
+    "create": "Create Rule",
+    "edit": "Edit Rule",
+    "delete": "Delete Rule",
+    "messages": {
+      "createSuccess": "Rule created successfully",
+      "createError": "Failed to create rule",
+      "editSuccess": "Rule updated successfully",
+      "editError": "Failed to update rule",
+      "deleteSuccess": "Rule deleted successfully",
+      "deleteError": "Failed to delete rule"
+    }
+  },
+  "feedback": {
+    "title": "Send Feedback",
+    "type": "Type",
+    "types": {
+      "bug": "Bug Report",
+      "feature": "Feature Request",
+      "improvement": "Improvement",
+      "other": "Other"
+    },
+    "title": "Title",
+    "description": "Description",
+    "screenshot": "Screenshot (optional)",
+    "submit": "Submit Feedback",
+    "messages": {
+      "success": "Thank you for your feedback!",
+      "error": "Failed to submit feedback. Please try again."
+    }
+  },
+  "backup": {
+    "title": "Backup & Restore",
+    "create": "Create Backup",
+    "restore": "Restore Backup",
+    "messages": {
+      "createSuccess": "Backup created successfully",
+      "createError": "Failed to create backup",
+      "restoreSuccess": "Backup restored successfully",
+      "restoreError": "Failed to restore backup"
+    }
+  }
+}

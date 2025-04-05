@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TradingView Alerts Manager</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container" style="height: 1000px;">
+        <div class="header">
+            <div class="controls">
+                <div class="search-box">
+                    <input type="text" id="search" class="search-input" placeholder="Search alerts...">
+                </div>
+                <div class="search-box">
+                    <select id="statusSearch" class="search-input">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+                </div>
+                <div class="search-box">
+                    <div class="validation-rules-dropdown">
+                        <div class="dropdown-header">
+                            <span class="dropdown-title">Validation Rules</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="dropdown-content">
+                            <div class="rule-option">
+                                <input type="checkbox" id="json_format" checked>
+                                <label for="json_format">JSON Format Check</label>
+                            </div>
+                            <div class="rule-option">
+                                <input type="checkbox" id="required_fields" checked>
+                                <label for="required_fields">Required Fields Check</label>
+                            </div>
+                            <div class="rule-option new-rule-option">
+                                <button id="createNewRule" class="new-rule-btn">
+                                    <i class="fas fa-plus"></i> New Rule
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="button-group">
+                    <button id="createAlert" class="button">
+                        <i class="fas fa-plus"></i> Create Alert
+                    </button>
+                    <button id="syncBtn" class="button">
+                        <i class="fas fa-sync"></i> Sync
+                    </button>
+                    <button id="validateBtn" class="button">
+                        <i class="fas fa-check-circle"></i> Validate Selected
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Alerts View -->
+        <div id="alertsView" class="view-section">
+            <div id="alertsList"></div>
+            <div class="pagination">
+                <button id="prevPage" class="button" disabled>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <span>Page <span id="currentPage">1</span> of <span id="totalPages">1</span></span>
+                <span class="count-info">Showing <span id="currentCount">0</span> of <span id="totalCount">0</span> alerts</span>
+                <button id="nextPage" class="button" disabled>
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Logs View -->
+        <div id="logsView" class="view-section" style="display: none;">
+            <div class="logs-header">
+                <button id="backToAlerts" class="button">
+                    <i class="fas fa-arrow-left"></i> Back to Alerts
+                </button>
+                <h2 id="logAlertName"></h2>
+            </div>
+            <div id="logsList"></div>
+            <div class="pagination">
+                <span class="count-info">Showing <span id="currentLogCount">0</span> of <span id="totalLogCount">0</span> logs</span>
+                <button id="prevLogPage" class="button" disabled>
+                    <i class="fas fa-chevron-left"></i> Previous
+                </button>
+                <span>Page <span id="currentLogPage">1</span> of <span id="totalLogPages">1</span></span>
+                <button id="nextLogPage" class="button" disabled>
+                    Next <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        <div id="global-tooltip" class="tooltip"></div>
+
+        <!-- Add Rule Creation Dialog -->
+        <div id="ruleDialog" class="rule-dialog" style="display: none;">
+            <div class="rule-dialog-content">
+                <h3>Create New Validation Rule</h3>
+                <div class="form-group">
+                    <label for="ruleName">Rule Name</label>
+                    <input type="text" id="ruleName" class="form-control" placeholder="Enter rule name">
+                </div>
+                <div class="form-group">
+                    <label for="ruleType">Rule Type</label>
+                    <select id="ruleType" class="form-control">
+                        <option value="field_required">Field Required</option>
+                        <option value="field_type">Field Type</option>
+                        <option value="field_pattern">Field Pattern</option>
+                        <option value="field_range">Field Range</option>
+                        <option value="field_relation">Field Relation</option>
+                        <option value="description_field_required">Description Field Required</option>
+                        <option value="description_field_type">Description Field Type</option>
+                        <option value="description_field_pattern">Description Field Pattern</option>
+                    </select>
+                </div>
+                <div id="ruleParams" class="rule-params">
+                    <!-- Dynamic form fields will be inserted here -->
+                </div>
+                <div id="ruleDialogError" class="error-message"></div>
+                <div class="dialog-buttons">
+                    <button id="cancelRule" class="btn btn-secondary">Cancel</button>
+                    <button id="saveRule" class="btn btn-primary">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>

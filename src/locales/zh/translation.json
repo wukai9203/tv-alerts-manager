@@ -1,0 +1,102 @@
+{
+  "common": {
+    "loading": "加载中...",
+    "error": "错误",
+    "success": "成功",
+    "cancel": "取消",
+    "submit": "提交",
+    "save": "保存",
+    "delete": "删除",
+    "edit": "编辑",
+    "back": "返回"
+  },
+  "alerts": {
+    "title": "TradingView 警报",
+    "create": "创建警报",
+    "sync": "同步",
+    "search": "搜索警报...",
+    "status": {
+      "all": "全部",
+      "active": "活跃",
+      "inactive": "未活跃"
+    },
+    "columns": {
+      "name": "名称",
+      "ticker": "交易对",
+      "status": "状态",
+      "condition": "条件",
+      "description": "描述",
+      "lastTrigger": "最后触发",
+      "lastUpdated": "最后更新"
+    },
+    "actions": {
+      "create": "创建警报",
+      "edit": "编辑警报",
+      "delete": "删除警报",
+      "toggle": "切换警报",
+      "viewLogs": "查看日志"
+    },
+    "messages": {
+      "noAlerts": "未找到警报",
+      "createSuccess": "警报创建成功",
+      "createError": "创建警报失败",
+      "editSuccess": "警报更新成功",
+      "editError": "更新警报失败",
+      "deleteSuccess": "警报删除成功",
+      "deleteError": "删除警报失败",
+      "syncSuccess": "警报同步成功",
+      "syncError": "同步警报失败"
+    }
+  },
+  "logs": {
+    "title": "警报日志",
+    "noLogs": "未找到该警报的日志",
+    "columns": {
+      "message": "消息",
+      "time": "时间"
+    }
+  },
+  "validation": {
+    "title": "验证规则",
+    "create": "创建规则",
+    "edit": "编辑规则",
+    "delete": "删除规则",
+    "messages": {
+      "createSuccess": "规则创建成功",
+      "createError": "创建规则失败",
+      "editSuccess": "规则更新成功",
+      "editError": "更新规则失败",
+      "deleteSuccess": "规则删除成功",
+      "deleteError": "删除规则失败"
+    }
+  },
+  "feedback": {
+    "title": "发送反馈",
+    "type": "类型",
+    "types": {
+      "bug": "问题报告",
+      "feature": "功能请求",
+      "improvement": "改进建议",
+      "other": "其他"
+    },
+    "title": "标题",
+    "description": "描述",
+    "screenshot": "截图（可选）",
+    "submit": "提交反馈",
+    "messages": {
+      "success": "感谢您的反馈！",
+      "error": "提交反馈失败，请重试。"
+    }
+  },
+  "backup": {
+    "title": "备份与恢复",
+    "create": "创建备份",
+    "restore": "恢复备份",
+    "messages": {
+      "createSuccess": "备份创建成功",
+      "createError": "创建备份失败",
+      "restoreSuccess": "备份恢复成功",
+      "restoreError": "恢复备份失败"
+    }
+  }
+}
